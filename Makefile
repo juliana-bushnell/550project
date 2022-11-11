@@ -20,6 +20,9 @@ output3/plot_2: code/03_make_output3.R
 	Rscript code/03_make_output3.R
 
 #! Removes itemsfrom the figures directories
+.PHONY: install
+install: 
+	Rscript -e "renv::restore(prompt = FALSE)"
 
 .PHONY: clean
 clean: clean
