@@ -1,6 +1,11 @@
 ## Figure 1 Code: This graph illustrates in general the 
 ##height and weight of players between the 2017-2019 season. 
-
+library(knitr)
+library(readr)
+library(kableExtra)
+library(ggplot2)
+library(dplyr, warn.conflicts = FALSE)
+train <- read_csv(file = here::here("data/train.csv"))
 here::i_am("code/02_plot_height_weight.R")
 library(ggplot2)
 tbl1plot <- 
