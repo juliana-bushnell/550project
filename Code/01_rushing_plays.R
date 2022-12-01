@@ -8,5 +8,5 @@ library(knitr)
 library(webshot)
 teamszn %>%
   kbl() %>%
-  kable_paper("hover", full_width = F)
-
+  kable_paper("hover", full_width = F) %>%
+save_kable("Figures/output1.png")

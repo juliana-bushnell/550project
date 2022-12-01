@@ -4,9 +4,9 @@
 here::i_am("code/02_plot_height_weight.R")
 library(ggplot2)
 tbl1plot <- 
-  ggplot(train, aes(x = PlayerHeight, y = PlayerWeight)) + geom_point(color='blue')
+  ggplot(train, aes(x = Position, y = PlayerWeight)) + geom_point(color='blue') + theme(aspect.ratio=1/10)
 
-print(tbl1plot + ggtitle(label = "Player Height (x) by Player Weight (y)",))
+print(tbl1plot + ggtitle(label = "Position (x) by Player Weight (y)",))
 
 ggsave(
   here::here("figures/height_weight.png"),

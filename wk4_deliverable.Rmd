@@ -16,8 +16,6 @@ library(readr)
 library(kableExtra)
 library(ggplot2)
 library(dplyr, warn.conflicts = FALSE)
-webshot::install_phantomjs()
-library(webshot)
 ```
 
 
@@ -104,7 +102,7 @@ teamszn %>%
 
 ## Plot 
 
-This plot shows the trend of player height vs player weight. The range player height is `r min(train$PlayerHeight)` to `r max(train$PlayerHeight)`. The range of player weight is `r min(train$PlayerWeight)` to `r max(train$PlayerWeight)`. This graph doesn't have to do with the root of the dataset which is trying to understand rushing plays. Rushing players are typically carried out by running backs, quarterbacks, and wide receivers. This graph illustrates in general the height and weight of players between the 2017-2019 season. 
+This plot shows the trend of position vs player weight. The range player height is `r min(train$PlayerHeight)` to `r max(train$PlayerHeight)`. The range of player weight is `r min(train$PlayerWeight)` to `r max(train$PlayerWeight)`. This graph doesn't have to do with the root of the dataset which is trying to understand rushing plays. Rushing players are typically carried out by running backs, quarterbacks, and wide receivers. This graph illustrates in general the height and weight of players between the 2017-2019 season. 
 ``` {r, Player Height vs Player Weight}
 knitr::include_graphics(
   here::here("figures/height_weight.png")
