@@ -15,14 +15,15 @@ library(readr)
 library(kableExtra)
 library(ggplot2)
 library(dplyr, warn.conflicts = FALSE)
+library(here)
 ```
 
 
 # Importing Data & Verify
 ```{r, message=FALSE, warning=FALSE, import, echo=FALSE}
-here::i_am("final_report.Rmd")
-train <- read_csv(file = here::here("data/train.csv"))
-player<- read_csv(file=here::here("data/playerdata.csv"))
+here::i_am("Final_Report.Rmd")
+train <- read_csv(file = here::here("Data/train.csv"))
+player<- read_csv(file=here::here("Data/playerdata.csv"))
 ```
 
 # Variable List
@@ -91,9 +92,11 @@ Team - home or away
 The first year in this data set is `r min(train$Season)` and goes until `r max(train$Season)`
 This tables shows the amount of recorded rushing plays per team per season by using the count of teams in possession during a play 
 ``` {r, rushing play table, echo=FALSE}
-knitr::include_graphics(
-  here::here("figures/output1.png")
+
+readRDS(
+  file = here::here("Figures/output1.rds")
 )
+
 
 ```
 
@@ -102,7 +105,7 @@ knitr::include_graphics(
 This plot shows the distribution of player weights within positions. The range of player weight is `r min(train$PlayerWeight)` to `r max(train$PlayerWeight)`. This graph doesn't have to do with the root of the dataset which is trying to understand rushing plays. Rushing players are typically carried out by running backs, quarterbacks, and wide receivers. This graph illustrates in general the weight of players between the 2017-2019 season. 
 ``` {r, Player Weight among positions}
 knitr::include_graphics(
-  here::here("figures/height_weight.png")
+  here::here("Figures/height_weight.png")
 )
 
 ```

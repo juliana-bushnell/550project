@@ -23,12 +23,12 @@ variables and 682154 observations. The data spans between the 2017-2019 season.
 Through this project, I hope to utilize both skills learned in this course, and 
 integrate some sports analytics packages into my report. We'll see though.
 
-## Report Generation
-In the terminal, type "make" and the final report will be generated.My make file is working. Currently, my final_report.Rmd file has not been put together. I have been working out of the wk4_deliverable.Rmd.
+##Building the docker image and building 
 
-As of right now, I have four R scripts in my code folder. The first one (01_rushing_plays.R) is me trying to make a table. The code worked in the R chunk in a .rmd file, but now I can't figure out how to make the r script export into a useable output that I can generate into my final report. 
+In the terminal, you can enter `make docker_image` in order to just create the image. 
 
-The second r script (02_plot_height_weight.R) plots out the hight and weight of the players in this data set. It creates an output that goes into the figures folder. In the .rmd file, it knits in the figure that's created. 
+You can also enter `docker_pc` to create the report using docker on your pc. 
+Similarly, you can enter `docker_mac` to create the report if you have a mac. 
 
-I don't know what my third figure will be exactly, but the code 03_make_output3.R is the current placeholder. 
-
+##Package troubleshoot
+If for whatever reason there are troubles with packages, you can enter `make install` to install all required packages. 
