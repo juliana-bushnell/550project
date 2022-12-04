@@ -23,12 +23,13 @@ variables and 682154 observations. The data spans between the 2017-2019 season.
 Through this project, I hope to utilize both skills learned in this course, and 
 integrate some sports analytics packages into my report. We'll see though.
 
-##Building the docker image and building 
+## Building the docker image and building 
 
 In the terminal, you can enter `make docker_image` in order to just create the image. 
 
-You can also enter `docker_pc` to create the report using docker on your pc. 
-Similarly, you can enter `docker_mac` to create the report if you have a mac. 
+You can also enter `make docker_mac` to create the report using docker on your mac. 
+Similarly, you can enter `make docker_pc` to create the report if you have a pc. 
 
-##Package troubleshoot
+## Package troubleshoot
+
 If for whatever reason there are troubles with packages, you can enter `make install` to install all required packages. 

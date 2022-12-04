@@ -1,7 +1,6 @@
 ---
 title: "Final Report"
 author: "Juliana Bushnell"
-date: "10/23/2022"
 output: html_document
 ---
 Every year, the NFL puts on a ‘data bowl’ for armature sports analysts. In 2020, their challenge was using player tracking data to predict how many yards will an NFL player gain after receiving a handoff. There are 49 variables and 682154 observations. 
@@ -102,17 +101,18 @@ readRDS(
 
 ## Plot 
 
-This plot shows the distribution of player weights within positions. The range of player weight is `r min(train$PlayerWeight)` to `r max(train$PlayerWeight)`. This graph doesn't have to do with the root of the dataset which is trying to understand rushing plays. Rushing players are typically carried out by running backs, quarterbacks, and wide receivers. This graph illustrates in general the weight of players between the 2017-2019 season. 
-``` {r, Player Weight among positions}
+This plot shows the distribution of player weights within positions. The range of player weight is `r min(train$PlayerWeight)` to `r max(train$PlayerWeight)`. This graph doesn't have to do with the root of the dataset which is trying to understand rushing plays. Rushing players are typically carried out by running backs, quarterbacks, and wide receivers. This graph illustrates in general the weight of players in the 2019 season. 
+``` {r, Player Weight among positions, echo=FALSE}
 knitr::include_graphics(
   here::here("Figures/height_weight.png")
 )
 
 ```
 
-##Table 3: Distribution of Colleges among positions
-This table shows the amount of rushing plays under different weather conditions by week.  
-``` {r, positions by colleges}
+## Table 3: Distribution of Colleges among positions
+This table illustrates which colleges have produced NFL players by position. 
+
+``` {r, positions by colleges, echo=FALSE}
 positioncollege <- table(player$position, player$playercollegename)
 library(knitr)
 library(webshot)
